@@ -1,0 +1,2 @@
+# DYNAMICA
+Kredit &amp; Debit
