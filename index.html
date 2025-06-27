@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamica Clothing & Labeling</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Dynamica Clothing & Labeling</h1>
+  <div class="form">
+    <input type="date" id="tanggal" />
+    <select id="jenis">
+      <option value="pemasukan">Pemasukan</option>
+      <option value="pengeluaran">Pengeluaran</option>
+    </select>
+    <input type="text" id="sumber" placeholder="Sumber (contoh: Order Masuk)" />
+    <input type="number" id="jumlah" placeholder="Jumlah" />
+    <button onclick="tambahData()">Tambah Data</button>
+    <button onclick="resetData()" class="reset">Reset Semua</button>
+    <button onclick="exportPDF()" class="export">Export PDF</button>
+  </div>
+
+  <div class="total">
+    <p>Total Pemasukan: Rp <span id="totalMasuk">0</span></p>
+    <p>Total Pengeluaran: Rp <span id="totalKeluar">0</span></p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Jenis</th>
+        <th>Sumber</th>
+        <th>Jumlah</th>
+      </tr>
+    </thead>
+    <tbody id="riwayat"></tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
