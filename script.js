@@ -17,8 +17,7 @@ function exportPDF() {
 
   const saldo = totalMasuk - totalKeluar;
 
-  // Tambahkan ringkasan total di akhir PDF
-  y += 10;
+  y += 20;
   doc.text(`Total Pemasukan: Rp ${totalMasuk.toLocaleString("id-ID")}`, 10, y);
   y += 10;
   doc.text(`Total Pengeluaran: Rp ${totalKeluar.toLocaleString("id-ID")}`, 10, y);
