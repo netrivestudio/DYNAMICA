@@ -20,6 +20,10 @@ function updateUI() {
 
   document.getElementById("totalMasuk").innerText = totalMasuk.toLocaleString("id-ID");
   document.getElementById("totalKeluar").innerText = totalKeluar.toLocaleString("id-ID");
+
+  // Tambahan untuk menghitung dan menampilkan saldo akhir
+  const saldo = totalMasuk - totalKeluar;
+  document.getElementById("saldo").innerText = saldo.toLocaleString("id-ID");
 }
 
 function tambahData() {
